@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:white;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/* 게임 제목 */
+header{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header h1{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+/* 게임 진행방식 */
+.manual {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.manual h3 {
+    font-size: 30px;
+}
+
+.manual ol {
+    padding-left: 40px;
+}
+
+.manual li {
+    font-size: 20px;
+}
+
+.gameBoard {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.gameBoard h1 {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.turnManual {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.turnManual div {
+    margin-left: 5px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.turnManual form {
+    padding: 5px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.firstTeam {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.firstTeam ol {
+    padding: 20px;
+}
+.secondTeam {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.secondTeam ol {
+    padding: 20px;
+}
