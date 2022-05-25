@@ -1,10 +1,25 @@
+const initHomerun = () => {
+    const arr = Array(10).fill(false);
+
+    let homerun = '';
+    while (homerun.length < 3) {
+        const random = parseInt(Math.random() * 9 + 1);
+
+        if (!arr[random]) {
+            homerun += random;
+            arr[random] = true;
+        }
+    }
+    return homerun;
+};
+
 // 1팀 리스트
 let team1List = [];
-let team1Answer = 356;
+let team1Answer = initHomerun();
 let team1SB = [];
 // 2팀 리스트
 let team2List = [];
-let team2Answer = 958;
+let team2Answer = initHomerun();
 let team2SB = [];
 // true면 1팀 false면 2팀
 let teamOrder = true;
@@ -14,6 +29,10 @@ let roundCount = 1;
 let inputButton = document.querySelector("#inputButton");
 // 버튼 클릭시 addItem함수 호출
 inputButton.addEventListener("click", addItem);
+
+
+
+
 
 // addItem함수
 function addItem() {
@@ -67,6 +86,11 @@ function showList(item) {
         list2 += "</ul>";
         document.querySelector(".test2").innerHTML = list2;
     }
+    // 9라운드 이상가면 무승부
+    if (roundCount === 10)
+        setTimeout(() => {
+            draw();
+        }, 1500);
 }
 
 // strike ball out 판별 함수 -> ex) 1s2b,   0out 식으로 문자열 반환
@@ -145,3 +169,8 @@ const countBalls = (number, answer) => {
     });
     return balls;
 };
+
+function draw() {
+    alert("무승부입니다!!!!!");
+    window.location.reload();
+}
