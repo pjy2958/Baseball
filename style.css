@@ -1,19 +1,27 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Jua', sans-serif;
 }
 
 body {
     background-color:white;
-    margin-left: 30px;
-    margin-right: 30px;
+}
+a:hover {
+    opacity: 0.7;
 }
 /* 게임 제목 */
 header{
     /* background-color: red; */
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    background-color: #2F8F9D;
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+div li {
+    list-style: none;
 }
 
 header h1{
@@ -24,9 +32,11 @@ header h1{
 }
 /* 게임 진행방식 */
 .manual {
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: #3BACB6;
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 .manual h3 {
@@ -42,9 +52,10 @@ header h1{
 }
 
 .gameBoard {
+    background-color: #82DBD8;
     width: 100%;
-    margin-top: 10px;
-    border: 1px solid black;
+    border: none;
+    color: white;
 }
 
 .gameBoard h1 {
@@ -57,6 +68,7 @@ header h1{
     display: flex;
     padding-bottom: 10px;
     align-items: center;
+    flex-direction: column;
 }
 
 .turnManual div {
@@ -74,19 +86,40 @@ header h1{
 
 .firstTeam {
     width: 50%;
+    height: 550px;
     float: left;
     box-sizing: border-box;
-    border: 1px solid black;
+    background-color: #B3E8E5;
 }
 .firstTeam ol {
     padding: 20px;
 }
+
+.firstTeam li {
+    padding: 5px;
+    font-size: 20px;
+    color:black;
+    opacity: 0.7;
+}
+
 .secondTeam {
     width: 50%;
+    height: 550px;
     float: right;
     box-sizing: border-box;
-    border: 1px solid black;
+    background-color: #B3E8E5;
 }
+
 .secondTeam ol {
     padding: 20px;
+}
+.secondTeam li {
+    padding: 5px;
+    color:black;
+    font-size: 20px;
+    opacity: 0.7;
+}
+#inputAnswer {
+    border: none;
+    width: 200px;
 }

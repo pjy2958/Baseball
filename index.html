@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>BaseballGame</title>
 </head>
@@ -14,42 +16,40 @@
 <body>
     <!-- 게임 제목 -->
     <header>
-        <h1 class="btn btn-success">BaseBall Game</h1>
+        <a href="index.html" style="color: white;text-decoration: none;">BaseBall Game</a>
     </header>
     <!-- 사용 설명서 공간 -->
     <div class="manual">
         <h3>게임 진행 방식</h3>
-        <ol start="1">
-            <li>~~~~~~~~~~~</li>
-            <li>~~~~~~~~~~~</li>
-            <li>~~~~~~~~~~~</li>
+        <ol start=" 1">
+            <li>1. 상대방의 정답을 입력한다.</li>
+            <li>2. 입력한 숫자 중 정답에 들어있는 숫자의 갯수만큼 ball</li>
+            <li>3. 정답의 숫자와 같고 위치까지 같다면 Strike</li>
+            <li>4. 숫자가 정답에 들어있지 않다면 Out</li>
         </ol>
     </div>
     <!-- 게임판 -->
     <div class="gameBoard">
-        <h1>게임판</h1>
+        <h1 style="padding-top: 15px;">게임판</h1>
         <div class="turnManual">
-            <span class="badge badge-success">1TEAM</span>
-            <span class="badge badge-danger">2TEAM</span>
-
-            <div class="input-group mb-3" style="display: flex;">
+            <div class="input-group mb-3" style="display: flex; align-items: center; border: none;">
                 <!-- 입력창 -->
-                <input id="inputAnswer" type=" number" class="form-control" placeholder="숫자를 입력하세요."
-                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input id="inputAnswer" type="number" class="form-control" placeholder="세자리 숫자를 입력하세요.">
                 <!-- 제출버튼 -->
-                <div id="inputButton" class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button">제출</button>
+                <div id="inputButton" class="input-group-append" style="border: none;">
+                    <button class="btn btn-outline-secondary" type="button"
+                        style="background-color: white; border: none;">제출</button>
                 </div>
             </div>
         </div>
         <!-- 1팀 -->
         <div class="firstTeam">
-            <h1>1 TEAM</h1>
+            <h1 class="badge badge-success" style="font-size: 30px;">1 TEAM</h1>
             <div class="test1"></div>
         </div>
         <!-- 2팀 -->
         <div class="secondTeam">
-            <h1>2 TEAM</h1>
+            <h1 class="badge badge-danger" style="font-size: 30px;">2 TEAM</h1>
             <div class="test2"></div>
         </div>
     </div>
